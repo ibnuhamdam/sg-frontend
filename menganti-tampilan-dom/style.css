@@ -34,7 +34,7 @@ nav li:nth-child(1) {
   nav ul {
     flex-direction: column;
     background: rgb(0, 183, 255);
-    width: 20%;
+    width: 50%;
     height: 100vh;
     margin-top: -60px;
     transition: 1s transform;
