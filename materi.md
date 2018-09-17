@@ -1,5 +1,5 @@
-1. Manipulasi DOM
-====================
+#1. Manipulasi DOM
+
 A. Mengakses Elemen pada DOM
 Sebelum mulai melakukan manipulasi pada elemen DOM, kita harus memilih mana elemen yang akan kita ubah propertinya. ada beberapa fungsi umum yg bisa digunakan untuk akses elemen DOM:
 
@@ -20,16 +20,16 @@ Untuk modifikasi attribut pada dom digunakan fungsi: setAttribute('parameter-1: 
 dan untuk hapus attribut yg sudah ada digunakan fungsi: removeAttribute('param-1: attrbute yg ingin dihapus')
 
 
-2. Menganti Tampilan Elemen DOM 
-================================
+#2. Menganti Tampilan Elemen DOM 
+
 A. Bagian sebelumnya kita sudah belajar bagaimana mengganti atribut elemen DOM, bagian ini  belajar tentang cara menggantikan atribut CSS pada elemen DOM, dengan memanfaatkan attribute *syle* pada sebuh element.
 
 B. Atau dengan langsung mengubah elemen css nya dengan bantuan: classlist
 Dengan menggunakan fitur yang disediakan oleh classList ini, kita dapat mengubah tampilan dari sebuah elemen DOM dengan mudah dan rapi.
 
 
-3. DOM Events
-===================
+#3. DOM Events
+
 Untuk mendapatkan web yang lebih interkatif maka kita perlu sebuah dom events, misalnya saja ketika user menekan sebuah button maka akan memberikan sebuah response ke pengguna, yang mana ini akan lebih bagus untuk pengalaman yg membuka web kita.
 
 A. Cara Listen sebuah events
@@ -45,8 +45,8 @@ B. Browser DOM Events
    Cek Lengkapnya: https://developer.mozilla.org/en-US/docs/Web/Events
 
 
-4. Menelusuri Element DOM Traversal
-====================================
+#4. Menelusuri Element DOM Traversal
+
 Untuk menelusuri DOM: Pertama seleksi elemen menggunakan dom method terlebih dahulu, setelah elemen nya ketemu, kita akan pilih elemen lain yg kita inginkan itu berdasakran elemen yg sudah kita dapat/seleksi tadi.
 *Intinya: Untuk mendapatkan sebuh elemen berdasakran elemen yg sudah kita seleksi di awal.
 
