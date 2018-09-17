@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>DOM</title>
+  <style>
+    #kotak {
+      width: 200px;
+      height: 150px;
+      border: 2px solid black;
+    }
+  </style>
 </head>
 <body>
 
@@ -13,40 +20,14 @@
   <br/> <br/>
   <input type="button" value="Increment" onclick="increment()">
   <input type="button" value="Decrement" onclick="decrement()">
-  
-  <script>
-    function increment(){
-    var i = document.getElementById("counter");
-    i.value++;
-  }
-  
-  function decrement(){
-    var i = document.getElementById("counter");
-    i.value--;
-  }
-  </script>
-  
   <br/> <br/><br/> <br/>
-  
   
   
   Event: Keyup
   <input type="text" id="keyup-1">
-  
   <div> Hallo: <span id="tampil"></span> </div>
   
-  <script>
-  
-    var input = document.getElementById('keyup-1');
-  
-    input.addEventListener('keyup', function() {
-      document.getElementById("tampil").innerHTML = input.value;
-    });
-  
-  </script>
-  
-  
-  
+
   <br/></br><br/> <br/>
   Event: Onchange
   <select id="selectmenu">
@@ -55,49 +36,53 @@
     <option value="Dua">Nomer Dua</option>
     <option value="Tiga">Nomer Tiga</option>
   </select>
-  
   <p id="tampung"> </p>
   
-  <script>
+
+  <br/></br><br/><br/>
+  Event: Mouseover and Mouseout
+  <div id="kotak"></div>
   
+<script>
+
+  // event onclick
+  function increment(){
+    var i = document.getElementById("counter");
+    i.value++;
+  }
+  
+  function decrement(){
+    var i = document.getElementById("counter");
+    i.value--;
+  }
+
+  // untuk event keyup
+  var input = document.getElementById('keyup-1');
+  input.addEventListener('keyup', function() {
+    document.getElementById("tampil").innerHTML = input.value;
+  });
+
+  // untuk event onchange
   var menu = document.getElementById('selectmenu');
   var tampung = document.getElementById('tampung');
   
   menu.addEventListener('change', function() {
     tampung.innerHTML = "Anda Memilih Nomor: " + menu.value;
   });
-  
-  </script>
-  
-  
-  
-  <br/></br><br/> <br/>
-  Event: Mouseover and Mouseout
-  <style>
-    #kotak {
-      width: 200px;
-      height: 150px;
-      border: 2px solid black;
-    }
-  </style>
-  
-  <div id="kotak"></div>
-  
-  <script>
-  
-    var kotak = document.getElementById('kotak');
-  
-    kotak.addEventListener('mouseover', function() {
-      kotak.style.backgroundColor = 'blue';
-      kotak.style.height = '250px';
-    });
-  
-    kotak.addEventListener('mouseout', function() {
-      kotak.style.backgroundColor = 'orange';
-      kotak.style.height = '50px';
-    });
-  
-  </script>
 
+
+  // untuk event mouseover dan mouseout
+  var kotak = document.getElementById('kotak');
+  kotak.addEventListener('mouseover', function() {
+    kotak.style.backgroundColor = 'blue';
+    kotak.style.height = '250px';
+  });
+
+  kotak.addEventListener('mouseout', function() {
+    kotak.style.backgroundColor = 'orange';
+    kotak.style.height = '50px';
+  });
+
+</script>
 </body>
 </html>
