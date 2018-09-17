@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Menganti tampilan elemen dengn DOM</title>
+  <style>
+    .teks1 {
+      color: #D55;
+      font-size: 2em;
+      font-style: italic;
+    }
+    .teks2 {
+      color: #55D;
+      font-size: 1.5em;
+    }
+  </style>
+</head>
+<body>
+  
+  <div id="container">
+    <h2> Hallo </h2>
+  </div>
+
+  <h1 id="teks"> Teks biasa! </h1>
+
+  <script>
+    
+    // BAGIAN 1, Cara paling umum untuk manipulasi tampilan elemen html dengan css 
+    var container = document.getElementById('container');
+    container.style.background = 'orange';
+    container.style.color =  'white'; // dan bisa juga pake property css lainnya
+
+    // ===== Bagian 2 CLASSLIST
+    var teks = document.getElementById("teks");
+
+    //  Mengakses class yang ada pada suatu elemen dengan menggunakan properti classList. Karena elemen kita belum memiliki kelas, maka kita akan menyimpan classList ke dalam sebuah variabel terlebih dahulu.
+    var cssTeks = teks.classList;
+
+    // ==== Menambahkan atau menghapus class CSS dari teks menggunakan method 'add' dan 'remove'
+   
+    // teks menjadi memiliki class teks2
+    //cssTeks.add("teks2");
+
+    // kelas teks2 dihilangkan dari teks, kembali ke awal
+    //cssTeks.remove("teks2");
+
+    //  ======== Mengunakan toggle untuk membalikan nilai
+    //cssTeks.toggle("teks1"); 
+    //cssTeks.toggle("teks1"); 
+
+  </script>
+</body>
+</html>

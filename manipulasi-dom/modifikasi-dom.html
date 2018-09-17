@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Modifikasi DOM!</title>
+</head>
+<body>
+  
+<div id="container">
+    <h1 class="heading">Judul Pertama</h1>
+    <p>Paragraf Pertama</p>
+    <p>Paragraf Kedua</p>
+    <p>Paragraf Ketiga</p>
+    <h2 class="heading">Judul Kedua</h2>
+
+    <form action="post" id="comments">
+        <input type="text" name="input-1" id="input-1">
+        <br>
+
+        <textarea name="comment-box" id="comment-box" class="box"></textarea>
+        <br>
+
+        <input type="reset" class="button">
+        <input type="submit" class="button submit">
+    </form>
+</div>
+  
+<script>
+    // modifikasi input dengan menambahkan attribute pada elemen nya
+    var input = document.getElementById("input-1");
+    input.setAttribute("size", 40);
+    // maka akan menjadi:
+    // <input type="text" name="input-1" id="input-1" size="40">
+
+    // menghapus attribute yg sudah ada pd elemen:
+    var input2 = document.getElementById("input-1");
+    input2.removeAttribute("size");
+    // maka menjadi:
+    // <input type="text" name="input-1" id="input-1">
+</script>
+</body>
+</html>

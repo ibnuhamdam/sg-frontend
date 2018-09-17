@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Dom: Menu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <nav class="navigasi">
+    <div id="burger" onclick="burgerMenu()"> <span> ☰ </span> </div>
+    <ul class="secret" id="test">
+      <li>-</li>
+      <li>About</li>
+      <li>Contact</li>
+      <li>Beranda</li>
+    </ul>
+  </nav>
+  
+  <script>
+    function burgerMenu() {
+      var secret = document.getElementById('test');
+      secret.classList.toggle('secret');
+    }
+  </script>
+</body>
+</html>

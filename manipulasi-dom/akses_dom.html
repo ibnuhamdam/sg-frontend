@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Akses DOM!</title>
+</head>
+<body>
+  
+<div id="container">
+    <h1 class="heading">Judul Pertama</h1>
+    <p>Paragraf Pertama</p>
+    <p>Paragraf Kedua</p>
+    <p>Paragraf Ketiga</p>
+    <h2 class="heading">Judul Kedua</h2>
+
+    <form action="post" id="comments">
+        <input type="text" name="input-1" id="input-1">
+        <br>
+
+        <textarea name="comment-box" id="comment-box" class="box"></textarea>
+        <br>
+
+        <input type="reset" class="button">
+        <input type="submit" class="button submit">
+    </form>
+</div>
+  
+<script>
+    
+    // Mengakses elemen sekaligus content dengan method getElementById dan property innerHTML
+    var input1 = document.getElementById('input-1'); 
+    input1.innerHTML;
+    //console.log(input1);
+
+    // Mengambil elemen dom berdasarkan nama class dengan getElementsByClassName
+    var headings = document.getElementsByClassName('heading');
+    // mengembalikan HTMcollection atau sama seperti array
+    console.log(headings[0]);
+
+    // Mengambil elemen dengan nama tag nya
+    var paragraphs = document.getElementsByTagName("p");
+    console.log(paragraphs.length);  // mengembalikan 3
+    console.log(paragraphs.item(0)); // mengembalikan teks paragraf pertama
+    
+    // mengambil semua elemen dengan class "heading" dan tag p
+    var element = document.querySelectorAll(".heading");
+    console.log(element.length);  // mengembalikan 5
+    console.log(element.item(0)); // elemen h1.heading
+
+    // mengembalikan hanya elemen yg pertama kali ditemukan aja
+    var elem2 = document.querySelector(".heading");
+    console.log(elem2);
+
+</script>
+</body>
+</html>

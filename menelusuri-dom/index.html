@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Dom Traversal</title>
+  <style>
+    .container {
+      width: 90%;
+      margin: 50px auto;
+    }
+    .box {
+      width: 200px;
+      padding: 10px;
+      border: 2px solid black;
+      text-align: center;
+      float: left;
+      margin-left: 10px;
+    }
+    button {
+      border: 0px;
+      padding: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">
+        <h2 class="nama"> Anisa Ramadani </h2>
+        <p class="alamat"> Bandung </p>
+        <p class="gender"> Perempuan </p>
+        <p class="umur"> 20 Tahun </p>
+        <button class="hapus"> Hapus </button>
+    </div>
+
+    <div class="box">
+        <h2 class="nama"> Hidayat Nugraha</h2>
+        <p class="alamat"> Bekasi </p>
+        <p class="gender"> Laki-Laki </p>
+        <p class="umur"> 25 Tahun </p>
+        <button class="hapus"> Hapus </button>
+     </div>
+
+     <div class="box">
+        <h2 class="nama"> John Smith </h2>
+        <p class="alamat"> Malang </p>
+        <p class="gender"> Laki-Laki </p>
+        <p class="umur"> 30 Tahun </p>
+        <button class="hapus"> Hapus </button>
+     </div>
+
+     <div class="box">
+        <h2 class="nama"> Andi Ramadhan </h2>
+        <p class="alamat"> Lombok </p>
+        <p class="gender"> Laki-Laki </p>
+        <p class="umur"> 15 Tahun </p>
+        <button class="hapus"> Hapus </button>
+     </div>
+  </div>
+
+
+  <script>
+  
+  //  Berfungsi hanya untuk satu element saja
+  var hapus = document.querySelector('.hapus');
+  var box   = document.querySelector('.box');
+  hapus.addEventListener('click', function() {
+    box.style.display = "none";
+  });
+
+  // ==== Menelusuri parent element dari sebuah element dengan parentElement
+  // var hapus = document.querySelectorAll('.hapus');
+  // for(let i = 0; i < hapus.length; i++) {
+  //   hapus[i].addEventListener('click', function(e) {
+  //     hapus[i].parentElement.style.display = "none";
+  //   });
+  // }
+
+
+  // === Menggunakan event delegation
+  // var hapus = document.querySelectorAll('.hapus');
+
+  // for(let i = 0; i < hapus.length; i++) {
+  //   hapus[i].addEventListener('click', function(e) {
+  //     e.target.parentElement.style.display = "none";
+  //   });
+  // }
+
+  </script>
+  
+</body>
+</html>

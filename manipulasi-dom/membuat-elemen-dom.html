@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>DOM</title>
+</head>
+<body>
+
+<div id="box">
+</div>
+      
+<script>
+
+  var h1 = document.createElement("h1");
+  var teks = document.createTextNode("Teks Judul!");
+
+  // untuk menambahkan elemen barunya ke dom, dengan cara:
+  h1.appendChild(teks); 
+
+  // untuk memasukan elemen yg baru saja dibuat ke dokumen html dengan cara
+  var box = document.getElementById('box');
+  box.appendChild(h1);
+
+  // untuk menambahkan elemen pada awal juga bisa dengan perintah insertBefore
+  // referensi: https://developer.mozilla.org/en-US/docs/Web/API/Node/insertBefore
+</script>
+</body>
+</html>

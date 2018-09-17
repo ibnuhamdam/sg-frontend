@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Hapus DOM!</title>
+</head>
+<body>
+  
+    <div id="container">
+        <h1 class="heading">Judul Pertama</h1>
+        <p>Paragraf Pertama</p>
+        <p>Paragraf Kedua</p>
+        <p>Paragraf Ketiga</p>
+        <h2 class="heading">Judul Kedua</h2>
+    </div>
+  
+    <script>
+
+      // pilih dulu elemen parent nya
+      var container = document.getElementById('container');
+      
+      // menghapus elemen h2 dengan class heading
+      var judulKedua = document.querySelector("h2.heading");
+      //container.removeChild(judulKedua);
+
+      // mengahapus elemen p yg kedua
+      var p2 = document.querySelectorAll('p')[1];
+      //container.removeChild(p2);
+      
+    </script>
+
+</body>
+</html>

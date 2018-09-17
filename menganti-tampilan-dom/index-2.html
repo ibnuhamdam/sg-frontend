@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>DOM</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+<div id="container">
+  <nav class="navigasi">
+    <ul class="secret">
+      <li>Contact</li>
+      <li>Branding</li>
+    </ul>
+  </nav>
+
+  <div class="bungkus_judul"> 
+    <h1 id="judul"> Hallo Bro! </h1> 
+  </div>
+
+  <p>
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus voluptatem error hic accusantium? Distinctio reiciendis sunt sed magnam nemo dolorum assumenda voluptas eaque impedit adipisci quas, doloribus explicabo, rem nostrum.
+  </p>
+
+</div>
+
+<script>
+  const nav = document.querySelector(".navigasi");
+  window.onscroll = function () { myFunction() };
+    function myFunction() {
+      if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
+        document.getElementById("judul").className = "judul_halaman";
+        nav.classList.add("change");
+      } else {
+        document.getElementById("judul").className = "";
+        nav.classList.remove("change");
+      }
+    }
+</script>
+</body>
+</html>
